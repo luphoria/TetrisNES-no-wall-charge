@@ -1659,10 +1659,12 @@ shift_tetrimino:
         jmp     @ret
 
 @restoreX:
-        lda     originalY
+        lda     originalY ; $ zpg?, $A5  originalY $00AE
         sta     tetriminoX
-        lda     #DAS_RESET
-        sta     autorepeatX
+        nop ;lda     #DAS_RESET ; "Wall charge" 
+        nop ;sta     autorepeatX
+        nop
+        nop
 @ret:   rts
 
 stageSpriteForCurrentPiece:
