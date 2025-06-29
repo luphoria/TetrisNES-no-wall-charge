@@ -1663,7 +1663,7 @@ shift_tetrimino:
         sta     tetriminoX
         nop ;lda     #DAS_RESET ; "Wall charge" 
         nop ;sta     autorepeatX
-        nop
+        nop ; nops to make the diff clean
         nop
 @ret:   rts
 
